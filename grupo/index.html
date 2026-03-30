@@ -16,6 +16,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
+    <!-- Tracking -->
+    <script src="https://track4you.app/a16cc65b-3891-4d3b-a76c-fb3550cbba47.js" defer></script>
+
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="../assets/icons/genesis-logo.svg">
     <style>
@@ -812,7 +815,7 @@
                 O Padrão L.M.E. é o método que uso há 3 anos pra detectar onde os institucionais estão posicionando força antes do preço disparar e entrar no mesmo fluxo, não como presa… mas como quem caça junto.
             </p>
 
-            <a href="https://chat.whatsapp.com/EFSGCz2JFNXCxJVPmu6kZm" target="_blank" class="btn-cta"
+            <a href="https://t.me/+m_XlXSzIEVMxMWUx" target="_blank" class="btn-cta"
                 onclick="typeof fbq !== 'undefined' && fbq('track', 'Lead', {content_name: 'Grupo VIP Hero'})">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
                     stroke-linejoin="round">
@@ -995,7 +998,7 @@
         </div>
 
         <!-- CTA repetido -->
-        <a href="https://chat.whatsapp.com/EFSGCz2JFNXCxJVPmu6kZm" target="_blank" class="btn-cta"
+        <a href="https://t.me/+m_XlXSzIEVMxMWUx" target="_blank" class="btn-cta"
             style="max-width:100%; animation-delay:0.5s;"
             onclick="typeof fbq !== 'undefined' && fbq('track', 'Lead', {content_name: 'Grupo VIP Features'})">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
@@ -1024,7 +1027,6 @@
         const dotsEl = document.getElementById('carouselDots');
         const slides = track.querySelectorAll('.carousel-slide');
         let current = 0;
-        let autoplay;
         let globalMuted = true;
 
         // Criar dots
@@ -1075,30 +1077,13 @@
             });
         });
 
-        document.getElementById('prevBtn').addEventListener('click', () => {
-            goTo(current - 1);
-            resetAutoplay();
-        });
-
-        document.getElementById('nextBtn').addEventListener('click', () => {
-            goTo(current + 1);
-            resetAutoplay();
-        });
-
-        function startAutoplay() {
-            autoplay = setInterval(() => goTo(current + 1), 8000);
-        }
-
-        function resetAutoplay() {
-            clearInterval(autoplay);
-            startAutoplay();
-        }
+        document.getElementById('prevBtn').addEventListener('click', () => goTo(current - 1));
+        document.getElementById('nextBtn').addEventListener('click', () => goTo(current + 1));
 
         // Inicia o primeiro vídeo
         const firstVideo = slides[0].querySelector('.carousel-video');
         if (firstVideo) { firstVideo.muted = true; firstVideo.play().catch(() => {}); }
         updateMuteIcons();
-        startAutoplay();
     </script>
 
     <script src="https://unpkg.com/lucide@latest"></script>
